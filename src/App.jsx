@@ -12,7 +12,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import ScrollUp from "./assets/scrollup.webp";
 import portimg from "./assets/14.webp";
-import "./components/styles/main.scss"
+
+import "./components/styles/main.scss";
 const App = () => {
   const jobsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -103,9 +104,14 @@ const App = () => {
   return (
     <div>
       {isLoading ? (
-        <div className="loading-interface">
-          <img src={portimg} alt="" />
-        </div>
+        <>
+          {" "}
+          <div className="loading-interface">
+         
+            <img src={portimg} alt="" />
+       
+          </div>{" "}
+        </>
       ) : (
         <>
           <main data-theme={theme}>
@@ -126,7 +132,7 @@ const App = () => {
               </div>
             </section>
             <section className="projects" ref={projectsRef}>
-              <Experience/>
+              <Experience />
             </section>
             <section className="projects" ref={projectsRef}>
               <Works />
