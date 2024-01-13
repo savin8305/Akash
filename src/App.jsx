@@ -12,8 +12,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import ScrollUp from "./assets/scrollup.webp";
 import portimg from "./assets/14.webp";
-
+import Cursor from "./components/Cursor";
 import "./components/styles/main.scss";
+import ProjectCard from "./components/ProjectCard";
 const App = () => {
   const jobsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -107,14 +108,13 @@ const App = () => {
         <>
           {" "}
           <div className="loading-interface">
-         
             <img src={portimg} alt="" />
-       
           </div>{" "}
         </>
       ) : (
         <>
           <main data-theme={theme}>
+            <Cursor />
             <Navbar
               onNavItemClick={handleNavItemClick}
               switchTheme={switchTheme}
@@ -125,17 +125,17 @@ const App = () => {
             </section>
             <section className="projects" ref={projectsRef}>
               <div
-                className={`relative w-full h-screen mx-auto`}
-                style={{ marginTop: "-20rem" }}
+             
               >
                 <ComputersCanvas />
               </div>
             </section>
             <section className="projects" ref={projectsRef}>
-              <Experience />
+              <Experience theme={theme} />
             </section>
             <section className="projects" ref={projectsRef}>
-              <Works />
+              {/* <Works /> */}
+              <ProjectCard />
             </section>
 
             <section className="skills" ref={skillsRef}>

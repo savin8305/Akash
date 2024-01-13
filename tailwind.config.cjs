@@ -11,7 +11,7 @@ module.exports = {
         secondary2: "#9c27b0",
 
         tertiary: "#151030",
-  
+
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
@@ -19,7 +19,7 @@ module.exports = {
       screens: {
         xs: "450px",
       },
-   
+
     },
   },
   plugins: [],
